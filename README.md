@@ -75,6 +75,8 @@ graph TD
     Coding & Cultural & Sports --> |Fetch Data| DB[(Supabase DB)]
     Dash --> |Fetch Media| Storage[(Supabase Storage)]
 
+```    
+
 erDiagram
     USER ||--o{ MEMBERSHIP : joins
     USER ||--o{ EVENT_REG : registers
@@ -102,7 +104,7 @@ erDiagram
 
 
 📂 Project Directory Structure
-```
+
 
 college_portal/
 │
@@ -134,7 +136,7 @@ college_portal/
     ├── accounts/            # Login/Register templates
     ├── dashboard/           # Dashboard widgets
     └── clubs/               # Specific templates (coding, cultural, etc.)
-```
+
 ## 🛠️ Installation & Setup
 
 Follow these steps to set up the project locally.
