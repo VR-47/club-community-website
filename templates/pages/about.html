@@ -1,7 +1,136 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container py-5 text-center">
-    <h1>About Us</h1>
-    <p class="lead">We are the central hub for student activities and department notices.</p>
+
+<div class="container py-5">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">About CSE Student Clubs</h1>
+        <p class="lead">
+            Building technical excellence, career readiness, creativity, and team spirit among students.
+        </p>
+    </div>
+
+    <!-- Vision & Mission -->
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h3>🎯 Our Vision</h3>
+            <p>
+                To create a well-rounded student community where technical knowledge,
+                career preparation, creativity, and physical fitness go hand in hand.
+                Our clubs aim to nurture talent beyond academics.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3>🚀 Our Mission</h3>
+            <ul>
+                <li>Enhance coding and technical problem-solving skills.</li>
+                <li>Prepare students for placements and career opportunities.</li>
+                <li>Encourage cultural expression and creativity.</li>
+                <li>Promote sportsmanship and physical well-being.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Clubs Section -->
+    <h2 class="text-center mb-4">Our Clubs</h2>
+
+    <div class="row">
+
+        <!-- Coding Club -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="card-title">💻 Coding Club</h4>
+                    <p>
+                        The Coding Club focuses on programming, data structures,
+                        algorithms, and software development. It helps students
+                        strengthen problem-solving skills and prepare for
+                        competitive coding platforms.
+                    </p>
+                    <ul>
+                        <li>Weekly Coding Contests</li>
+                        <li>DSA & Algorithm Workshops</li>
+                        <li>Hackathon Participation</li>
+                        <li>Open Source Contributions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placement Club -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="card-title">📈 Placement Club</h4>
+                    <p>
+                        The Placement Club prepares students for campus placements
+                        and internships. It focuses on aptitude training, interview
+                        preparation, resume building, and group discussions.
+                    </p>
+                    <ul>
+                        <li>Mock Interviews</li>
+                        <li>Aptitude & Reasoning Sessions</li>
+                        <li>Resume & LinkedIn Workshops</li>
+                        <li>Industry Expert Talks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cultural Club -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="card-title">🎭 Cultural Club</h4>
+                    <p>
+                        The Cultural Club encourages students to showcase their
+                        artistic talents in music, dance, drama, and fine arts.
+                        It organizes college fests and cultural celebrations.
+                    </p>
+                    <ul>
+                        <li>Annual Cultural Fest</li>
+                        <li>Dance & Music Competitions</li>
+                        <li>Drama & Talent Shows</li>
+                        <li>Festival Celebrations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sports Club -->
+        <div class="col-md-6 mb-4">
+            <div class="card shadow h-100">
+                <div class="card-body">
+                    <h4 class="card-title">🏆 Sports Club</h4>
+                    <p>
+                        The Sports Club promotes physical fitness, teamwork,
+                        and sportsmanship. It organizes intra-college and
+                        inter-college tournaments in various sports.
+                    </p>
+                    <ul>
+                        <li>Cricket & Football Tournaments</li>
+                        <li>Indoor Games Competitions</li>
+                        <li>Annual Sports Meet</li>
+                        <li>Fitness & Wellness Activities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Activities Section -->
+    <div class="mt-5 text-center">
+        <h2 class="mb-4">Why Join Our Clubs?</h2>
+        <p class="lead">
+            Develop technical expertise, improve communication skills,
+            explore your creativity, and maintain a healthy lifestyle —
+            all while building lifelong friendships.
+        </p>
+                <a class="btn btn-light btn-lg px-5 shadow-sm text-primary fw-bold rounded-pill" href="{% url 'register' %}">Get Started</a>
+    </div>
+
 </div>
+
 {% endblock %}
