@@ -11,6 +11,8 @@ urlpatterns = [
     # The add_project path MUST have the slug parameter to accept 'coding-club'
     # and MUST have name='add_project'
     path('<slug:club_slug>/add-project/', views.add_project, name='add_project'),
+    path('campus/resources/', views.global_resources, name='global_resources'),
+    
     
     # Dynamic slug paths (like the detail view) MUST go last
     path('<slug:club_slug>/', views.club_detail, name='club_detail'),
