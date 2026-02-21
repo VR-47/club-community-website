@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'accounts',     # Login, Register
     'clubs',        # Club logic
     'dashboard',    # Student Dashboard
+    'blog',         # Blog & Articles
 ]
 
 MIDDLEWARE = [

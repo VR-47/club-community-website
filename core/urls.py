@@ -18,6 +18,9 @@ urlpatterns = [
 
     # 4. Dashboard App (Student private area)
     path('dashboard/', include('dashboard.urls')),
+
+    # 5. Blog App (Articles, Event Recaps, Achievements)
+    path('blog/', include('blog.urls')),
 ]
 
 # --- Media File Configuration (For Local Development) ---
