@@ -48,3 +48,14 @@ class Project(models.Model):
 
     def __str__(self):
         return self.title
+
+class Resource(models.Model):
+    # Notice we removed the 'club = models.ForeignKey(...)' line entirely!
+    title = models.CharField(max_length=200, help_text="e.g., Django Beginner Notes, Computer Graphics PDF")
+    description = models.TextField(blank=True)
+    resource_link = models.URLField(help_text="Link to Google Drive, GitHub, etc.")
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+      

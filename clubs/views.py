@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render, get_object_or_404
-from .model import Club, Project, Event
+from .model import Club, Project, Event , Resource
 from .forms import ProjectForm
 from django.contrib.auth.decorators import login_required
 
@@ -65,3 +65,12 @@ def register_event(request, event_id):
     else:
         event.participants.add(request.user)
     return redirect('clubs:club_detail', club_slug=event.club.slug)
+
+
+
+def global_resources(request):
+    # Fetch ALL resources in the database, newest first
+    resources = Resource.objects.all().order_by('-uploaded_at')
+    
+    return render(request, 'clubs/global_resources.html', {'resources': resources})
+
