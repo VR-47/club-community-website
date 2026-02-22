@@ -3,6 +3,9 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+
+
 urlpatterns = [
     # Admin Panel
     path('admin/', admin.site.urls),
@@ -21,6 +24,7 @@ urlpatterns = [
 
     # 5. Blog App (Articles, Event Recaps, Achievements)
     path('blog/', include('blog.urls')),
+    
 ]
 
 # --- Media File Configuration (For Local Development) ---
