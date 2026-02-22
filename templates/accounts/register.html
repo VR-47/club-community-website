@@ -1,25 +1,97 @@
 {% extends 'base.html' %}
-
 {% block title %}Register - College Portal{% endblock %}
 
 {% block content %}
+
+<style>
+
+/* Background Animation */
+.register-bg{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(-45deg,#4f46e5,#0ea5e9,#6a11cb,#2575fc);
+    background-size:400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glass Card */
+.glass-card{
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    border-radius:25px;
+    padding:40px;
+    color:white;
+    box-shadow:0 25px 60px rgba(0,0,0,0.25);
+    transition:0.4s;
+}
+
+.glass-card:hover{
+    transform: translateY(-6px);
+}
+
+/* Inputs */
+.form-control{
+    border-radius:12px;
+    padding:12px;
+}
+
+/* Button */
+.btn-auth{
+    border-radius:30px;
+    font-weight:bold;
+    padding:12px;
+    transition:0.3s;
+}
+
+.btn-auth:hover{
+    transform: scale(1.04);
+}
+
+</style>
+
+<div class="register-bg">
+
+<div class="container">
 <div class="row justify-content-center">
-    <div class="col-md-5">
-        <div class="card shadow">
-            <div class="card-body p-4">
-                <h2 class="text-center mb-4">Create Account</h2>
-                <form method="POST">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </div>
-                </form>
-                <p class="text-center mt-3">
-                    Already have an account? <a href="{% url 'login' %}">Login here</a>
-                </p>
-            </div>
-        </div>
-    </div>
+
+<div class="col-md-6">
+
+<div class="glass-card">
+
+<h2 class="text-center mb-4 fw-bold">✨ Create Student Account</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<button type="submit" class="btn btn-light w-100 btn-auth mt-3">
+Sign Up
+</button>
+
+</form>
+
+<p class="text-center mt-4">
+Already have account?
+<a href="{% url 'login' %}" class="text-warning fw-bold">
+Login here
+</a>
+</p>
+
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
 {% endblock %}
